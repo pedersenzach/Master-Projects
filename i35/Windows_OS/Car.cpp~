@@ -140,7 +140,7 @@ void Node::drawNode(void){
     //Car Body
     drawFilledBox(xPos-9, yPos, xPos, yPos + 4);
     setColor(YELLOW);
-    //Head lights
+    //Head lights.
     drawFilledBox(xPos-1, yPos+3, xPos, yPos+4);
     drawFilledBox(xPos-1, yPos, xPos, yPos+1 );
     setColor(RED);

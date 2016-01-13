@@ -105,10 +105,10 @@ void LinkedList::initNodes(int x){
     //Make sure objects/cars don't spawn on top of each other
     Node*headPtr = head;
     Node*tailPtr = tail;
-    int counter = 0;
+    int counter = 1;
         while(headPtr->getPrevNode() != NULL){
             Node*prev = headPtr->getPrevNode();
-            headPtr->setXPos(-9*counter);
+            headPtr->setXPos(-20*counter);
             if(prev->getLane() == headPtr->getLane()){
                 prev->setXPos(prev->getXPos() -20);
             }
@@ -118,8 +118,7 @@ void LinkedList::initNodes(int x){
             counter += 1;
         }
         if(headPtr->getPrevNode() == NULL){
-			Node*prev = headPtr->getNextNode();
-            headPtr->setXPos(prev->getXPos()-9);
+            headPtr->setXPos(-9);
             int id = headPtr->getID();
             cout << "Node " << counter << " xPos: " << headPtr->getXPos() << endl;
         }

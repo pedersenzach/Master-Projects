@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1448863108 source:c:\users\admin\desktop\c++projects\lab6_linked_list\main.cpp
+	<iostream>
+	<string.h>
+	"LinkedList.h"
+
+1448233043 c:\users\admin\desktop\c++projects\lab6_linked_list\object.h
+
+1448233206 source:c:\users\admin\desktop\c++projects\lab6_linked_list\object.cpp
+	"Object.h"
+
+1448851617 source:c:\users\admin\desktop\c++projects\lab6_linked_list\node.cpp
+	"Node.h"
+	<string.h>
+
+1448853661 c:\users\admin\desktop\c++projects\lab6_linked_list\node.h
+	<iostream>
+
+1448863044 source:c:\users\admin\desktop\c++projects\lab6_linked_list\linkedlist.cpp
+	"LinkedList.h"
+	"Node.h"
+	<iostream>
+
+1448851659 c:\users\admin\desktop\c++projects\lab6_linked_list\linkedlist.h
+	"Node.h"
+

@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1445398645 source:c:\users\admin\desktop\myrepositories\homework\exam_1\compare.cpp
+	<iostream>
+	"compare.h"
+
+1445398645 c:\users\admin\desktop\myrepositories\homework\exam_1\compare.h
+
+1445398670 source:c:\users\admin\desktop\myrepositories\homework\exam_1\main.cpp
+	<iostream>
+	"compare.h"
+
+1449526051 source:c:\users\admin\desktop\myrepositories\homework\exam_1_lab\compare.cpp
+	<iostream>
+	"compare.h"
+
+1445395045 c:\users\admin\desktop\myrepositories\homework\exam_1_lab\compare.h
+
+1449526051 source:c:\users\admin\desktop\myrepositories\homework\exam_1_lab\main.cpp
+	<iostream>
+	"compare.h"
+

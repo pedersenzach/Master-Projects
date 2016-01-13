@@ -1,0 +1,27 @@
+Zachary Pedersen
+9/23/15
+
+Team Style Guide (ECHO Team)
+
+We decided the following for our rules:
+
+Camel Case.
+
+Curly brackets will begin on the same line of the block code, 
+while ending on it's own line.
+
+Functions will be contained in thier own file and will be included 
+into the main program. The will be saved with the .h extension to 
+distinguish them. This will allow them to be used in future 
+programs if wanted.
+
+Tabs will be set for a standard spacing of 4 units.
+
+Line Lengths should not exceed 70 characters in length.
+
+<<<<<<< HEAD
+Code is subject to change if a more preferred way is agreed upon.
+=======
+As projects go on, we will most likely notice and decide on other 
+aspects of style in C++.
+>>>>>>> cc8a54d77e1e3b8aa518b856b3f0c6ea16570c2e

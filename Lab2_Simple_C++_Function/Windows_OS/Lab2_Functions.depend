@@ -1,0 +1,37 @@
+# depslib dependency file v1.0
+1442776630 source:c:\users\admin\desktop\c++projects\lab2_functions\main.cpp
+	<iostream>
+
+1442776659 source:c:\users\admin\desktop\c++projects\lab2_functions\minfunction.cpp
+	<iostream>
+	"MinFunction.h"
+
+1442776618 c:\users\admin\desktop\c++projects\lab2_functions\minfunction.h
+
+1442776774 source:c:\users\admin\desktop\c++projects\lab2_functions\maxfunction.cpp
+	<iostream>
+	"MaxFunction.h"
+
+1442776842 c:\users\admin\desktop\c++projects\lab2_functions\maxfunction.h
+
+1442777174 source:c:\users\admin\desktop\myrepositories\lab2\functions\main.cpp
+	<iostream>
+
+1442777261 source:c:\users\admin\desktop\myrepositories\lab2\functions\maxfunction.cpp
+	<iostream>
+	"MaxFunction.h"
+
+1442776842 c:\users\admin\desktop\myrepositories\lab2\functions\maxfunction.h
+
+1442777259 source:c:\users\admin\desktop\myrepositories\lab2\functions\minfunction.cpp
+	<iostream>
+	"MinFunction.h"
+
+1442776618 c:\users\admin\desktop\myrepositories\lab2\functions\minfunction.h
+
+1442777293 source:c:\users\admin\desktop\myrepositories\lab2\functions\show_grades.cpp
+	<iostream>
+	"show_grades.h"
+
+1442777050 c:\users\admin\desktop\myrepositories\lab2\functions\show_grades.h
+

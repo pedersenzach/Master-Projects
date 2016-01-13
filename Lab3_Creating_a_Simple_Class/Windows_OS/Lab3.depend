@@ -1,0 +1,60 @@
+# depslib dependency file v1.0
+1444525413 source:c:\users\admin\desktop\myrepositories\lab3\main.cpp
+	<iostream>
+	"people.h"
+
+1444514063 c:\users\admin\desktop\myrepositories\lab3\utility_functions.h
+
+1444514343 source:c:\users\admin\desktop\myrepositories\lab3\utility_functions.cpp
+	<string>
+	"utility_functions.h"
+
+1444516701 source:c:\users\admin\desktop\myrepositories\lab3\data_input.cpp
+	<iostream>
+	<string>
+	"data_input.h"
+
+1444516674 c:\users\admin\desktop\myrepositories\lab3\data_input.h
+	<string>
+
+1444517854 c:\users\admin\desktop\myrepositories\lab3\name_generator.h
+
+1444517909 source:c:\users\admin\desktop\myrepositories\lab3\name_generator.cpp
+	<iostream>
+	"name_generator.h"
+	<string>
+	"utility_functions.h"
+	"data_input.h"
+
+1444521985 c:\users\admin\desktop\myrepositories\lab3\people.h
+	<string>
+
+1444522116 source:c:\users\admin\desktop\myrepositories\lab3\people.cpp
+	<iostream>
+	"people.h"
+	<string>
+
+1445399483 source:c:\users\admin\desktop\myrepositories\homework\lab3\main.cpp
+	<iostream>
+	"people.h"
+
+1445399335 c:\users\admin\desktop\myrepositories\homework\lab3\people.h
+	<string>
+
+1445399335 source:c:\users\admin\desktop\myrepositories\homework\lab3\people.cpp
+	<iostream>
+	"people.h"
+	<string>
+
+1449954570 source:c:\users\admin\desktop\myrepositories\homework\lab3_creating_a_simple_class\windows_os\main.cpp
+	<iostream>
+	"people.h"
+
+1449954570 c:\users\admin\desktop\myrepositories\homework\lab3_creating_a_simple_class\windows_os\people.h
+	<string>
+
+1449954570 source:c:\users\admin\desktop\myrepositories\homework\lab3_creating_a_simple_class\windows_os\people.cpp
+	<iostream>
+	"people.h"
+	<string>
+

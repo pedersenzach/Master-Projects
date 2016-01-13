@@ -1,0 +1,37 @@
+# depslib dependency file v1.0
+1446859206 source:c:\users\admin\desktop\c++projects\exam2\complex.cpp
+	"Complex.h"
+	<iostream>
+
+1446859206 c:\users\admin\desktop\c++projects\exam2\complex.h
+	<iostream>
+
+1446865037 source:c:\users\admin\desktop\c++projects\exam2\main.cpp
+	"Complex.h"
+	<iostream>
+	<string>
+
+1446859206 source:c:\users\admin\desktop\myrepositories\homework\exam_2_lab\complex.cpp
+	"Complex.h"
+	<iostream>
+
+1446859206 c:\users\admin\desktop\myrepositories\homework\exam_2_lab\complex.h
+	<iostream>
+
+1446869373 source:c:\users\admin\desktop\myrepositories\homework\exam_2_lab\main.cpp
+	"Complex.h"
+	<iostream>
+	<string>
+
+1449954567 source:c:\users\admin\desktop\myrepositories\homework\exam_2_lab\windows_os\complex.cpp
+	"Complex.h"
+	<iostream>
+
+1449954567 c:\users\admin\desktop\myrepositories\homework\exam_2_lab\windows_os\complex.h
+	<iostream>
+
+1449954567 source:c:\users\admin\desktop\myrepositories\homework\exam_2_lab\windows_os\main.cpp
+	"Complex.h"
+	<iostream>
+	<string>
+

@@ -106,21 +106,27 @@ void LinkedList::initNodes(int x){
     Node*headPtr = head;
     Node*tailPtr = tail;
     int counter = 0;
-        while(headPtr->getPrevNode() != NULL){
+        while(headPtr->getPrevNode() != NULL){  //start working through current list of nodes
             Node*prev = headPtr->getPrevNode();
-            headPtr->setXPos(-9*counter);
-            if(prev->getLane() == headPtr->getLane()){
-                prev->setXPos(prev->getXPos() -20);
+            Node*ptr = head;                    //pointer for going through the list again
+            headPtr->setXPos(-9*counter);       //set xposition depending on how many times gone through loop
+            while(ptr != NULL){                 //scan list to make sure a node is not in the same lane/xpos
+                if(headPtr->getLane() == ptr->getLane() && headPtr->getXPos() == ptr->getXPos() - 9){
+                    headPtr->setXPos(headPtr->getXPos()-9);
+                }
+                ptr = ptr->getPrevNode();       //go to next node
             }
             int id = headPtr->getID();
-            cout << "Node " << counter << " xPos: " << headPtr->getXPos() << endl;
+            cout << "Node " << counter << " xPos: " << headPtr->getXPos() << " lane:" << headPtr->getLane() << " speed:" << \
+                                                        headPtr->getXSpeed() << endl;
             headPtr = headPtr->getPrevNode();
             counter += 1;
         }
-        if(headPtr->getPrevNode() == NULL){
+        if(headPtr->getPrevNode() == NULL){       //If last in list
 			Node*prev = headPtr->getNextNode();
-            headPtr->setXPos(prev->getXPos()-9);
+            headPtr->setXPos(prev->getXPos()-18); //Set current node to a car length away from the previously spawned car
             int id = headPtr->getID();
-            cout << "Node " << counter << " xPos: " << headPtr->getXPos() << endl;
+            cout << "Node " << counter << " xPos: " << headPtr->getXPos() << " lane:" << headPtr->getLane() << " speed:" << \
+                                                        headPtr->getXSpeed() << endl;
         }
 }

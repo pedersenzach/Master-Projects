@@ -13,7 +13,7 @@ void drawScene(void) {              //Draw here
 void animate() {                    // move your objects here
     i35.move();
     glutPostRedisplay();
-    pause_ms(16);
+    //pause_ms(16);
 }
 
 // keyboard handler to terminate the program when "q" key is pressed

@@ -67,6 +67,7 @@ void LinkedList::move(void){
     Node*ptr = tail;
     while(ptr != NULL){
         ptr->moveNode();
+        pass();
         //if node gets past 1000(screen length)
         if(ptr->getXPos() > 1000){
             //reset node back to just off the beginning of the screen
@@ -134,9 +135,12 @@ void LinkedList::initNodes(int x){
 void LinkedList::pass(){
     Node*headPtr = head;
     while(headPtr != NULL){
+        cout << "hello" << endl;
         Node*ptr = headPtr;
         while(ptr != NULL){
             if(headPtr->getLane() == ptr->getLane()){
+                int dist = headPtr->getXPos() - ptr->getXPos();
+                cout << dist << endl;
 
             }
             ptr = ptr->getPrevNode();

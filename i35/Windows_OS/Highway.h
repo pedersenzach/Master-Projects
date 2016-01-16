@@ -14,6 +14,7 @@ class LinkedList{
         LinkedList();
 
         //Mutators
+        void pass();
         void insertFront( int val );
         void insertBack( int val );
         void move(void);

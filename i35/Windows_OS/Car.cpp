@@ -137,8 +137,6 @@ void Node::moveNode(void){
 
 void Node::drawNode(void){
     //Car Outline
-    setColor(BLACK);
-	drawBox(xPos-9, yPos-1, xPos+1, yPos + 4);
     setColor(this->color);
     //Car Body
     drawFilledBox(xPos-9, yPos, xPos, yPos + 4);
@@ -146,6 +144,8 @@ void Node::drawNode(void){
     //Head lights.
     drawFilledBox(xPos-1, yPos+3, xPos, yPos+4);
     drawFilledBox(xPos-1, yPos, xPos, yPos+1 );
+    setColor(BLACK);
+	drawBox(xPos-9, yPos-1, xPos+1, yPos + 4);
     setColor(RED);
     //tail lights
     drawFilledBox(xPos-9, yPos, xPos-8, yPos+1);

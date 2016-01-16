@@ -130,3 +130,17 @@ void LinkedList::initNodes(int x){
                                                         headPtr->getXSpeed() << endl;
         }
 }
+
+void LinkedList::pass(){
+    Node*headPtr = head;
+    while(headPtr != NULL){
+        Node*ptr = headPtr;
+        while(ptr != NULL){
+            if(headPtr->getLane() == ptr->getLane()){
+
+            }
+            ptr = ptr->getPrevNode();
+        }
+        headPtr = headPtr->getPrevNode();
+    }
+}

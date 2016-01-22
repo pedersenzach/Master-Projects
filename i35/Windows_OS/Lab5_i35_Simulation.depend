@@ -17,10 +17,10 @@
 
 1341003170 c:\program files (x86)\codeblocks\mingw\include\_mingw.h
 
-1450694603 c:\program files (x86)\codeblocks\mingw\include\gl\glut.h
+1426364128 c:\program files (x86)\codeblocks\mingw\include\gl\glut.h
 	"freeglut_std.h"
 
-1450694603 c:\program files (x86)\codeblocks\mingw\include\gl\freeglut_std.h
+1426364128 c:\program files (x86)\codeblocks\mingw\include\gl\freeglut_std.h
 	<windows.h>
 	<EGL/egl.h>
 	<GLES/gl.h>
@@ -350,6 +350,38 @@
 	"Car.h"
 
 1452923534 source:c:\users\admin\desktop\master-projects\i35\windows_os\main.cpp
+	<iostream>
+	"Highway.h"
+
+1453258384 source:c:\users\su\desktop\master-projects\i35\windows_os\car.cpp
+	"Car.h"
+	<time.h>
+
+1453258384 c:\users\su\desktop\master-projects\i35\windows_os\car.h
+	"Graphics.h"
+	<iostream>
+
+1453258384 c:\users\su\desktop\master-projects\i35\windows_os\graphics.h
+	<iostream>
+	<stdlib.h>
+	<GL/glut.h>
+	<GL/glut.h>
+	<GLUT/glut.h>
+
+1453258384 source:c:\users\su\desktop\master-projects\i35\windows_os\graphics.cpp
+	"Graphics.h"
+	<cmath>
+	<time.h>
+
+1453422180 source:c:\users\su\desktop\master-projects\i35\windows_os\highway.cpp
+	"Highway.h"
+	"Car.h"
+	<iostream>
+
+1453258384 c:\users\su\desktop\master-projects\i35\windows_os\highway.h
+	"Car.h"
+
+1453258384 source:c:\users\su\desktop\master-projects\i35\windows_os\main.cpp
 	<iostream>
 	"Highway.h"
 

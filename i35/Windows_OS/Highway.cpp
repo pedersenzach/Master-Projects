@@ -135,7 +135,6 @@ void LinkedList::initNodes(int x){
 void LinkedList::pass(){
     Node*headPtr = head;
     while(headPtr != NULL){
-        cout << "hello" << endl;
         Node*ptr = headPtr;
         while(ptr != NULL){
             if(headPtr->getLane() == ptr->getLane()){

@@ -109,11 +109,11 @@ void LinkedList::initNodes(int x){
     int counter = 0;
         while(headPtr->getPrevNode() != NULL){  //start working through current list of nodes
             Node*prev = headPtr->getPrevNode();
-            Node*ptr = head;                    //pointer for going through the list again
+            Node*ptr = head->getPrevNode();                    //pointer for going through the list again
             headPtr->setXPos(-9*counter);       //set xposition depending on how many times gone through loop
             while(ptr != NULL){                 //scan list to make sure a node is not in the same lane/xpos
-                if(headPtr->getLane() == ptr->getLane() && headPtr->getXPos() == ptr->getXPos() - 9){
-                    headPtr->setXPos(headPtr->getXPos()-9);
+                if(headPtr->getLane() == ptr->getLane() && headPtr->getXPos() == ptr->getXPos()){
+                    headPtr->setXPos(headPtr->getXPos()-18);
                 }
                 ptr = ptr->getPrevNode();       //go to next node
             }
@@ -134,6 +134,9 @@ void LinkedList::initNodes(int x){
 
 void LinkedList::pass(){
     Node*headPtr = head;
+    if(headPtr->getPrevNode() == NULL){
+        return;
+    }
     while(headPtr != NULL){
         Node*ptr = headPtr;
         while(ptr != NULL){

@@ -353,7 +353,7 @@
 	<iostream>
 	"Highway.h"
 
-1453258384 source:c:\users\su\desktop\master-projects\i35\windows_os\car.cpp
+1453422251 source:c:\users\su\desktop\master-projects\i35\windows_os\car.cpp
 	"Car.h"
 	<time.h>
 
@@ -373,15 +373,15 @@
 	<cmath>
 	<time.h>
 
-1453422180 source:c:\users\su\desktop\master-projects\i35\windows_os\highway.cpp
+1454024687 source:c:\users\su\desktop\master-projects\i35\windows_os\highway.cpp
 	"Highway.h"
 	"Car.h"
 	<iostream>
 
-1453258384 c:\users\su\desktop\master-projects\i35\windows_os\highway.h
+1454024706 c:\users\su\desktop\master-projects\i35\windows_os\highway.h
 	"Car.h"
 
-1453258384 source:c:\users\su\desktop\master-projects\i35\windows_os\main.cpp
+1453939226 source:c:\users\su\desktop\master-projects\i35\windows_os\main.cpp
 	<iostream>
 	"Highway.h"
 

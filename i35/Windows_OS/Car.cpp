@@ -44,7 +44,7 @@ Node::Node( int val, Node * nextptr, Node * prevptr ){
     nextNode = nextptr;
     //randomly generated
     lane = randomizer(0,2);
-    xPos = -1;
+    xPos = 0;
     yPos = 0;
     //randomly generated
     xSpeed = randomizer(1,3);
@@ -139,7 +139,7 @@ void Node::drawNode(void){
     //Car Outline
     setColor(this->color);
     //Car Body
-    drawFilledBox(xPos-9, yPos, xPos, yPos + 4);
+    drawFilledBox(xPos-9, yPos-1, xPos+1, yPos + 4);
     setColor(YELLOW);
     //Head lights.
     drawFilledBox(xPos-1, yPos+3, xPos, yPos+4);

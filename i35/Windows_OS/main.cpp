@@ -4,6 +4,8 @@ using namespace std;
 
 
 LinkedList i35;
+
+
 void drawScene(void) {              //Draw here
     clearWindow();
     i35.draw();                  // clear the last scene
@@ -12,6 +14,7 @@ void drawScene(void) {              //Draw here
 
 void animate() {                    // move your objects here
     i35.move();
+
     glutPostRedisplay();
     pause_ms(16);
 }
@@ -30,7 +33,6 @@ void handleKey(unsigned char key, int x, int y) {
 
 
 int main(int argc, char **argv) {
-
     graphicsSetup(argc, argv);      // initialize the graphics system
     glutDisplayFunc(drawScene);     // tell GLUT what function draws the scene
     glutIdleFunc(animate);          // Move objects when animating
@@ -38,3 +40,4 @@ int main(int argc, char **argv) {
     glutMainLoop();                 // GLUT will control the action
     //glutSwapBuffers();            // double buffering control
 }
+

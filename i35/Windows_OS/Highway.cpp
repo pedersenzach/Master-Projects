@@ -55,10 +55,10 @@ void LinkedList::draw(void){
     drawBox(-2, 365, 1002, 350);
     drawBox(-2, 350, 1002, 335);
     //Draw the objects in the list
-    Node *ptr = tail;
+    Node *ptr = head;
     while(ptr != NULL){
         ptr->drawNode();
-        ptr = ptr->getNextNode();
+        ptr = ptr->getPrevNode();
     }
 }
 
@@ -67,7 +67,6 @@ void LinkedList::move(void){
     Node*ptr = tail;
     while(ptr != NULL){
         ptr->moveNode();
-        pass();
         //if node gets past 1000(screen length)
         if(ptr->getXPos() > 1000){
             //reset node back to just off the beginning of the screen
@@ -77,15 +76,6 @@ void LinkedList::move(void){
     }
 }
 
-//Print out the list objects and have them identify themselves
-void LinkedList::print(void){
-    Node *ptr = tail;
-    while(ptr != NULL ){
-        int ptrID = ptr->getID();
-        cout << "The Node ID is **" << ptrID << "**. There are **" << numberOfNodes << "** nodes stored currently." << endl;
-        ptr = ptr->getNextNode();
-    }
-}
 
 //Initializes the position in which each car will spawn
 void LinkedList::initNodes(int x){
@@ -103,50 +93,62 @@ void LinkedList::initNodes(int x){
             tail->setYPos(343);
         }
     }
-    //Make sure objects/cars don't spawn on top of each other
     Node*headPtr = head;
-    Node*tailPtr = tail;
-    int counter = 0;
-        while(headPtr->getPrevNode() != NULL){  //start working through current list of nodes
-            Node*prev = headPtr->getPrevNode();
-            Node*ptr = head->getPrevNode();                    //pointer for going through the list again
-            headPtr->setXPos(-9*counter);       //set xposition depending on how many times gone through loop
-            while(ptr != NULL){                 //scan list to make sure a node is not in the same lane/xpos
-                if(headPtr->getLane() == ptr->getLane() && headPtr->getXPos() == ptr->getXPos()){
-                    headPtr->setXPos(headPtr->getXPos()-18);
-                }
-                ptr = ptr->getPrevNode();       //go to next node
-            }
-            int id = headPtr->getID();
-            cout << "Node " << counter << " xPos: " << headPtr->getXPos() << " lane:" << headPtr->getLane() << " speed:" << \
-                                                        headPtr->getXSpeed() << endl;
+    while( headPtr != NULL){
+        if(headPtr == head){
+            headPtr->setXPos(-1);
+            display(headPtr);
             headPtr = headPtr->getPrevNode();
-            counter += 1;
+            continue;
         }
-        if(headPtr->getPrevNode() == NULL){       //If last in list
-			Node*prev = headPtr->getNextNode();
-            headPtr->setXPos(prev->getXPos()-18); //Set current node to a car length away from the previously spawned car
-            int id = headPtr->getID();
-            cout << "Node " << counter << " xPos: " << headPtr->getXPos() << " lane:" << headPtr->getLane() << " speed:" << \
-                                                        headPtr->getXSpeed() << endl;
+        Node*next = headPtr->getNextNode();
+        headPtr->setXPos(next->getXPos() - 22);
+        display(headPtr);
+        headPtr = headPtr->getPrevNode();
         }
 }
 
-void LinkedList::pass(){
-    Node*headPtr = head;
-    if(headPtr->getPrevNode() == NULL){
-        return;
-    }
-    while(headPtr != NULL){
-        Node*ptr = headPtr;
-        while(ptr != NULL){
-            if(headPtr->getLane() == ptr->getLane()){
-                int dist = headPtr->getXPos() - ptr->getXPos();
-                cout << dist << endl;
+void display(Node*headPtr){
+    cout << "Node " << headPtr->getID() << " xPos: " << headPtr->getXPos() << " lane:" << headPtr->getLane() << " speed:" << \
+                                                        headPtr->getXSpeed() << endl;
+}
 
+void LinkedList::pass(void){
+    Node*headPtr = head;
+    Node*ptr = head->getPrevNode();
+    while( headPtr != NULL){
+        while( ptr != NULL){
+            if(headPtr == ptr){continue;}
+            if(headPtr->getLane() == ptr->getLane()){
+               if(headPtr->getXPos() > ptr->getXPos()){
+                    int dist = headPtr->getXPos() - ptr->getXPos();
+                    if( dist <= 21){
+                        if(ptr->getXPos() == headPtr->getXPos() - )
+                    }
+               }
+               else{
+                    int dist = ptr->getXPos() - headPtr->getXPos();
+               }
             }
             ptr = ptr->getPrevNode();
         }
-        headPtr = headPtr->getPrevNode();
+    headPtr = headPtr->getPrevNode();
+    ptr = head;
     }
 }
+
+/*
+void LinkedList::checkList(void){
+    Node*headPtr = head;
+    Node*ptr = head->getPrevNode();
+    while( headPtr != NULL){
+        while( ptr != NULL){
+            ptr = ptr->getPrevNode();
+        }
+    headPtr = headPtr->getPrevNode();
+    if( headPtr == NULL){
+        return;
+    }
+    ptr = headPtr->getPrevNode();
+    }
+}*/

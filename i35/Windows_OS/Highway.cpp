@@ -83,13 +83,13 @@ void LinkedList::initNodes(int x){
         //insert object into back of list
         insertBack(i);
         //set coordinates to the corresponding lane (Top-Bottom)
-        if(tail->getLane() == 0){
+        if(tail->getLane() == 2){
             tail->setYPos(373);
         }
         if(tail->getLane() == 1){
             tail->setYPos(357);
         }
-        if(tail->getLane() == 2){
+        if(tail->getLane() == 0){
             tail->setYPos(343);
         }
     }
@@ -97,13 +97,13 @@ void LinkedList::initNodes(int x){
     while( headPtr != NULL){
         if(headPtr == head){
             headPtr->setXPos(-1);
-            display(headPtr);
+            display(headPtr);    //Display current node information
             headPtr = headPtr->getPrevNode();
             continue;
         }
         Node*next = headPtr->getNextNode();
-        headPtr->setXPos(next->getXPos() - 22);
-        display(headPtr);
+        headPtr->setXPos(next->getXPos() - 20);  //set position of next node one car length away + 2 pixels for asthetics.
+        display(headPtr);        //Display current node information
         headPtr = headPtr->getPrevNode();
         }
 }
@@ -116,26 +116,38 @@ void display(Node*headPtr){
 void LinkedList::pass(void){
     Node*headPtr = head;
     Node*ptr = head->getPrevNode();
-    while( headPtr != NULL){
-        while( ptr != NULL){
-            if(headPtr == ptr){continue;}
-            if(headPtr->getLane() == ptr->getLane()){
+    while( headPtr != NULL){    //Start loop to check list
+        ptr = head;             //Make sure headptr is compared to previous nodes when further in scan
+        while( ptr != NULL){    //start cycling through list to compare to headptr
+            if(headPtr == ptr){ //if they are the same node, skip to next node to compare to.
+                ptr = ptr->getPrevNode();
+                continue;
+            }
+            if(headPtr->getLane() == ptr->getLane()){ //If nodes are in the same lane
                if(headPtr->getXPos() > ptr->getXPos()){
                     int dist = headPtr->getXPos() - ptr->getXPos();
-                    if( dist <= 21){
-                        if(ptr->getXPos() == headPtr->getXPos() - )
+                    if( dist <= 30 && headPtr->getXSpeed() < ptr->getXSpeed()){
+                        if(ptr->getXPos() >= headPtr->getXPos() - 18){
+                            ptr->setXSpeed(headPtr->getXSpeed());
+                        }
                     }
                }
-               else{
+               else
+               if(headPtr->getXPos() < ptr->getXPos()){
                     int dist = ptr->getXPos() - headPtr->getXPos();
-               }
+                    if( dist <= 30 && headPtr->getXSpeed() > ptr->getXSpeed()){
+                        if(ptr->getXPos() <= headPtr->getXPos() - 18){
+                            headPtr->setXSpeed(ptr->getXSpeed());
+                        }
+                    }
+                }
             }
-            ptr = ptr->getPrevNode();
+        ptr = ptr->getPrevNode();
         }
     headPtr = headPtr->getPrevNode();
-    ptr = head;
     }
 }
+
 
 /*
 void LinkedList::checkList(void){

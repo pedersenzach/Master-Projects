@@ -14,7 +14,7 @@ void drawScene(void) {              //Draw here
 
 void animate() {                    // move your objects here
     i35.move();
-
+    i35.pass();
     glutPostRedisplay();
     pause_ms(16);
 }

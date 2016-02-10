@@ -21,15 +21,15 @@ class Node{
         Node( int val, Node * nextNode, Node * prevNode);
 
         //Car Accessors
-        int getID(void);
-        Node * getPrevNode( void);
-        Node * getNextNode(void);
-        int getLane(void);
-        ColorName getNodeColor(void);
-        float getXSpeed(void);
-        float getYSpeed(void);
-        float getXPos(void);
-        float getYPos(void);
+        int getID(void)const;
+        Node * getPrevNode(void)const;
+        Node * getNextNode(void)const;
+        int getLane(void)const;
+        ColorName getNodeColor(void)const;
+        float getXSpeed(void)const;
+        float getYSpeed(void)const;
+        float getXPos(void)const;
+        float getYPos(void)const;
         void drawNode(void);
         void moveNode(void);
 

@@ -381,3 +381,31 @@
 1454728398 source:c:\users\su\desktop\master-projects\i35\windows_os\main.cpp
 	"Highway.h"
 
+1455063606 source:c:\users\su\desktop\master-projects\i35\car.cpp
+	"Car.h"
+
+1455063622 c:\users\su\desktop\master-projects\i35\car.h
+	"Graphics.h"
+
+1454728029 c:\users\su\desktop\master-projects\i35\graphics.h
+	<iostream>
+	<stdlib.h>
+	<cmath>
+	<time.h>
+	<ctime>
+	<GL/glut.h>
+	<GL/glut.h>
+	<GLUT/glut.h>
+
+1454727934 source:c:\users\su\desktop\master-projects\i35\graphics.cpp
+	"Graphics.h"
+
+1455062747 source:c:\users\su\desktop\master-projects\i35\highway.cpp
+	"Highway.h"
+
+1455065430 c:\users\su\desktop\master-projects\i35\highway.h
+	"Car.h"
+
+1455062767 source:c:\users\su\desktop\master-projects\i35\main.cpp
+	"Highway.h"
+

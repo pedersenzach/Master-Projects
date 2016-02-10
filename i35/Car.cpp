@@ -93,39 +93,39 @@ void Node::setLane(int l){
 }
 
 //Accessors
-int Node::getLane(void){
+int Node::getLane(void)const{
     return this->lane;
 }
 
-ColorName Node::getNodeColor(void){
+ColorName Node::getNodeColor(void)const{
     return this->color;
 }
 
-float Node::getXPos(void){
+float Node::getXPos(void)const{
     return this->xPos;
 }
 
-float Node::getYPos(void){
+float Node::getYPos(void)const{
     return this->yPos;
 }
 
-float Node::getXSpeed(void){
+float Node::getXSpeed(void)const{
     return this->xSpeed;
 }
 
-float Node::getYSpeed(void){
+float Node::getYSpeed(void)const{
     return this->ySpeed;
 }
 
-int Node::getID( void ){
+int Node::getID( void )const{
     return id;
 }
 
-Node * Node::getNextNode(void){
+Node * Node::getNextNode(void)const{
     return nextNode;
 }
 
-Node * Node::getPrevNode(void){
+Node * Node::getPrevNode(void)const{
     return this->prevNode;
 }
 

@@ -2,7 +2,6 @@
 
 LinkedList i35;
 
-
 void drawScene(void) {              //Draw here
     clearWindow();
     i35.draw();                  // clear the last scene
@@ -11,7 +10,7 @@ void drawScene(void) {              //Draw here
 
 void animate() {                    // move your objects here
     i35.move();
-    i35.pass();
+    i35.antiCollision();
     glutPostRedisplay();
     pause_ms(16);
 }

@@ -65,9 +65,9 @@ void LinkedList::move(void){
     while(ptr != NULL){
         ptr->moveNode();
         //if node gets past 1000(screen length)
-        if(ptr->getXPos() > 1000){
+        if(ptr->getXPos() > 1009){
             //reset node back to just off the beginning of the screen
-            ptr->setXPos(-9);//car length is 9 pixels long
+            ptr->setXPos(-1);//car length is 9 pixels long
         }
         ptr = ptr->getNextNode();
     }
@@ -110,7 +110,7 @@ void display(Node*headPtr){
                                                         headPtr->getXSpeed() << endl;
 }
 
-void LinkedList::pass(void){
+void LinkedList::antiCollision(void){
     Node*headPtr = head;
     Node*ptr = head->getPrevNode();
     while( headPtr != NULL){    //Start loop to check list

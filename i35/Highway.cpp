@@ -94,13 +94,13 @@ void LinkedList::initNodes(int x){
     while( headPtr != NULL){
         if(headPtr == head){
             headPtr->setXPos(-1); //sets first node just off the screen to the left
-            display(headPtr);    //Display current node information
+            display(headPtr);    //Display current node information in the console
             headPtr = headPtr->getPrevNode();
             continue;
         }
         Node*next = headPtr->getNextNode();
         headPtr->setXPos(next->getXPos() - 20);  //set position of next node one car length away + 2 pixels for asthetics.
-        display(headPtr);        //Display current node information
+        display(headPtr);        //Display current node information in the console
         headPtr = headPtr->getPrevNode();
         }
 }

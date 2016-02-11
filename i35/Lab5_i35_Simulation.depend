@@ -384,7 +384,7 @@
 1455063606 source:c:\users\su\desktop\master-projects\i35\car.cpp
 	"Car.h"
 
-1455063622 c:\users\su\desktop\master-projects\i35\car.h
+1455148862 c:\users\su\desktop\master-projects\i35\car.h
 	"Graphics.h"
 
 1454728029 c:\users\su\desktop\master-projects\i35\graphics.h
@@ -400,10 +400,10 @@
 1454727934 source:c:\users\su\desktop\master-projects\i35\graphics.cpp
 	"Graphics.h"
 
-1455062747 source:c:\users\su\desktop\master-projects\i35\highway.cpp
+1455088821 source:c:\users\su\desktop\master-projects\i35\highway.cpp
 	"Highway.h"
 
-1455065430 c:\users\su\desktop\master-projects\i35\highway.h
+1455083303 c:\users\su\desktop\master-projects\i35\highway.h
 	"Car.h"
 
 1455062767 source:c:\users\su\desktop\master-projects\i35\main.cpp

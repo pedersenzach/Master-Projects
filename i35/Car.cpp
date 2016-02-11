@@ -11,6 +11,7 @@ Node::Node(void){
     yPos = 0;
     //randomly generated
     xSpeed = randomizer(1,3);
+    xMinSpeed = 1;
     ySpeed = 0;
     //randomly generated
     int c = randomizer(1,13);
@@ -29,6 +30,7 @@ Node::Node( int val, Node * prevPtr){
     yPos = 0;
     //randomly generated
     xSpeed = randomizer(1,3);
+    xMinSpeed = 1;
     ySpeed = 0;
     //randomly generated
     int c = randomizer(1,13);
@@ -47,6 +49,7 @@ Node::Node( int val, Node * nextptr, Node * prevptr ){
     yPos = 0;
     //randomly generated
     xSpeed = randomizer(1,3);
+    xMinSpeed = 1;
     ySpeed = 0;
     //randomly generated
     int c = randomizer(1,13);
@@ -84,6 +87,14 @@ void Node::setXSpeed(float x){
     this->xSpeed = x;
 }
 
+void Node::setXMinSpeed(float x){
+    this->xMinSpeed = x;
+}
+
+void Node::setXMaxSpeed(float x){
+    this->xMaxSpeed = x;
+}
+
 void Node::setYSpeed(float y){
     this->ySpeed = y;
 }
@@ -111,6 +122,14 @@ float Node::getYPos(void)const{
 
 float Node::getXSpeed(void)const{
     return this->xSpeed;
+}
+
+float Node::getXMaxSpeed(void)const{
+    return this->xMaxSpeed;
+}
+
+float Node::getXMinSpeed(void)const{
+    return this->xMinSpeed;
 }
 
 float Node::getYSpeed(void)const{

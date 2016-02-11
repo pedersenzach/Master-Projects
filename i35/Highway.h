@@ -2,7 +2,7 @@
 #include "Car.h"
 
 
-const int Max_cars = 100;//Control How many number cars are in simulation
+const int Max_cars = 10;//Control How many number cars are in simulation
 
 class LinkedList{
     public:

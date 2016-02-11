@@ -7,7 +7,8 @@ class Node{
         float xPos;
         float yPos;
         float xSpeed;
-        float xPassSpeed;
+        float xMinSpeed;
+        float xMaxSpeed;
         float ySpeed;
         int id;
         Node * prevNode;
@@ -27,6 +28,8 @@ class Node{
         int getLane(void)const;
         ColorName getNodeColor(void)const;
         float getXSpeed(void)const;
+        float getXMinSpeed(void)const;
+        float getXMaxSpeed(void)const;
         float getYSpeed(void)const;
         float getXPos(void)const;
         float getYPos(void)const;
@@ -43,6 +46,8 @@ class Node{
         void setXPos(float);
         void setYPos(float);
         void setXSpeed(float);
+        void setXMinSpeed(float);
+        void setXMaxSpeed(float);
         void setYSpeed(float);
 };
 

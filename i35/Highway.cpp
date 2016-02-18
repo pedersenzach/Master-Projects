@@ -63,7 +63,12 @@ void LinkedList::draw(void){
 void LinkedList::move(void){
     Node*ptr = tail;
     while(ptr != NULL){
-        ptr->moveNode();
+	if(ptr->getXMinSpeed() < ptr->getXSpeed()){
+		ptr->moveMinNode();
+	}
+	else{
+		ptr->moveNode();
+	}
         //if node gets past 1000(screen length)
         if(ptr->getXPos() > 1009){
             //reset node back to just off the beginning of the screen
@@ -125,7 +130,7 @@ void LinkedList::antiCollision(void){
                     int dist = headPtr->getXPos() - ptr->getXPos();
                     if( dist <= 30 && headPtr->getXSpeed() < ptr->getXSpeed()){
                         if(ptr->getXPos() >= headPtr->getXPos() - 18){
-                            ptr->setXSpeed(headPtr->getXSpeed());
+                            ptr->setXMinSpeed(headPtr->getXSpeed());
                         }
                     }
                }
@@ -134,7 +139,7 @@ void LinkedList::antiCollision(void){
                     int dist = ptr->getXPos() - headPtr->getXPos();
                     if( dist <= 30 && headPtr->getXSpeed() > ptr->getXSpeed()){
                         if(ptr->getXPos() <= headPtr->getXPos() - 18){
-                            headPtr->setXSpeed(ptr->getXSpeed());
+                            headPtr->setXMinSpeed(ptr->getXSpeed());
                         }
                     }
                 }

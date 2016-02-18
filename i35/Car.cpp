@@ -11,7 +11,7 @@ Node::Node(void){
     yPos = 0;
     //randomly generated
     xSpeed = randomizer(1,3);
-    xMinSpeed = 1;
+    xMinSpeed = 99;
     ySpeed = 0;
     //randomly generated
     int c = randomizer(1,13);
@@ -30,7 +30,7 @@ Node::Node( int val, Node * prevPtr){
     yPos = 0;
     //randomly generated
     xSpeed = randomizer(1,3);
-    xMinSpeed = 1;
+    xMinSpeed = 99;
     ySpeed = 0;
     //randomly generated
     int c = randomizer(1,13);
@@ -49,7 +49,7 @@ Node::Node( int val, Node * nextptr, Node * prevptr ){
     yPos = 0;
     //randomly generated
     xSpeed = randomizer(1,3);
-    xMinSpeed = 1;
+    xMinSpeed = 99;
     ySpeed = 0;
     //randomly generated
     int c = randomizer(1,13);
@@ -91,10 +91,6 @@ void Node::setXMinSpeed(float x){
     this->xMinSpeed = x;
 }
 
-void Node::setXMaxSpeed(float x){
-    this->xMaxSpeed = x;
-}
-
 void Node::setYSpeed(float y){
     this->ySpeed = y;
 }
@@ -124,10 +120,6 @@ float Node::getXSpeed(void)const{
     return this->xSpeed;
 }
 
-float Node::getXMaxSpeed(void)const{
-    return this->xMaxSpeed;
-}
-
 float Node::getXMinSpeed(void)const{
     return this->xMinSpeed;
 }
@@ -151,6 +143,11 @@ Node * Node::getPrevNode(void)const{
 void Node::moveNode(void){
     this->xPos += this->xSpeed;
     this->yPos += this->ySpeed;
+}
+
+void Node::moveMinNode(void){
+	this->xPos += this->xMinSpeed;
+	this->yPos += this->ySpeed;	
 }
 
 void Node::drawNode(void){

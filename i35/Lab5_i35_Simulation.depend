@@ -409,3 +409,31 @@
 1455062767 source:c:\users\su\desktop\master-projects\i35\main.cpp
 	"Highway.h"
 
+1455742457 source:/home/su/Master-Projects/i35/Car.cpp
+	"Car.h"
+
+1455742457 /home/su/Master-Projects/i35/Car.h
+	"Graphics.h"
+
+1455742457 /home/su/Master-Projects/i35/Graphics.h
+	<iostream>
+	<stdlib.h>
+	<cmath>
+	<time.h>
+	<ctime>
+	<GL/glut.h>
+	<GL/glut.h>
+	<GLUT/glut.h>
+
+1455742457 source:/home/su/Master-Projects/i35/Graphics.cpp
+	"Graphics.h"
+
+1455742457 source:/home/su/Master-Projects/i35/Highway.cpp
+	"Highway.h"
+
+1455742457 /home/su/Master-Projects/i35/Highway.h
+	"Car.h"
+
+1455742457 source:/home/su/Master-Projects/i35/main.cpp
+	"Highway.h"
+

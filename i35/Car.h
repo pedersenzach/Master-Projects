@@ -8,7 +8,6 @@ class Node{
         float yPos;
         float xSpeed;
         float xMinSpeed;
-        float xMaxSpeed;
         float ySpeed;
         int id;
         Node * prevNode;
@@ -29,12 +28,12 @@ class Node{
         ColorName getNodeColor(void)const;
         float getXSpeed(void)const;
         float getXMinSpeed(void)const;
-        float getXMaxSpeed(void)const;
         float getYSpeed(void)const;
         float getXPos(void)const;
         float getYPos(void)const;
         void drawNode(void);
         void moveNode(void);
+	void moveMinNode(void);
 
 
         //Car Mutators
@@ -47,7 +46,6 @@ class Node{
         void setYPos(float);
         void setXSpeed(float);
         void setXMinSpeed(float);
-        void setXMaxSpeed(float);
         void setYSpeed(float);
 };
 
